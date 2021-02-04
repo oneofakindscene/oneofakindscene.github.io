@@ -1,10 +1,10 @@
- ---
- layout: post
- title:  "Dummy Post 78"
- date:   2021-02-05T14:25:52-05:00
- author: Ben Centra
- categories: Dummy
- ---
+---
+layout: post
+title:  "Dummy Post 78"
+date:   2021-02-05T14:25:52-05:00
+author: Ben Centra
+categories: Dummy
+---
 
 ## t-test
 - 사용 라이브러리 : scipy, numpy
