@@ -1,7 +1,7 @@
 ---
 layout: post
-title: $TITLE
-date: 2021-02-07T00:47:28
+title: GMM
+date: 2021-02-07T01:15:37
 author: SCENE
 categories: DATA
 ---
@@ -942,7 +942,7 @@ plt.show()
 
 
     
-![png](7_Clustering-GMM_files/7_Clustering-GMM_18_0.png)
+![png](/images/7_Clustering-GMM_files/7_Clustering-GMM_18_0.png)
     
 
 
@@ -1004,5 +1004,5 @@ ax.legend(fontsize=12)
 
 
     
-![png](7_Clustering-GMM_files/7_Clustering-GMM_20_1.png)
+![png](/images/7_Clustering-GMM_files/7_Clustering-GMM_20_1.png)
     
