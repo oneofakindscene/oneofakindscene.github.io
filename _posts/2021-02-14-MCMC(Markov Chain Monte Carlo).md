@@ -71,7 +71,7 @@ categories: Data Science
 - Stochastic Process(=Random Process)는 시간별로 표시된(indexed by time) 확률변수의 집합(또는 모음) $\Rightarrow$ 즉, 시간에 따라 확률도 변하게 된다는 뜻 입니다.
 - 예를 들어, 주가도 시간에 따라 연속적으로 변함 $\Rightarrow$ 이것을 연속시간 랜덤과정(continuous-time random process)이라고 합니다.
 
-#### parameter 추정시에 활용하는 ${{f_{new}(x)} \over {f_{old}(x)}} > 1$의 의미
+#### parameter 추정시에 활용하는 ${f_{new}(x) \over f_{old}(x)} > 1$의 의미
 - 수식의 의미 : x값은 동일하며, 이전 파라미터(예를 들어 평균)에 비해 지금 파라미터가 더 좋은가를 확인
 - ${f_{old}(x)}$ : 평균이 old일때의 분포에서 x일때의 제안분포에서의 값
 - ${f_{new}(x)}$ : 평균이 new일때의 분포에서 x일때의 제안분포에서의 값
