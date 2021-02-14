@@ -2,8 +2,8 @@
 layout: post
 title: GMM
 date: 2021-02-07T01:15:37
-author: SCENE
-categories: DATA
+author: Scene
+categories: [Data Science]
 ---
 ## Clustering_GMM
 - GMM 성능 평가 : [링크](https://www.researchgate.net/post/What_is_the_best_criteria_for_GMM_model_selection)
