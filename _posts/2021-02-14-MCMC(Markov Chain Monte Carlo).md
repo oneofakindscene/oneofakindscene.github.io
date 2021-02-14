@@ -4,6 +4,7 @@ title: MCMC(Markov Chain Monte Carlo)
 date: 2021-02-14T12:11:00
 author: Scene
 categories: Data-Science
+use_math: true
 ---
 
 ## __MCMC(Markov Chain Monte Carlo)__

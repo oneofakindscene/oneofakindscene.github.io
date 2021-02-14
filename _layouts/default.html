@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    {% if page.use_math %}
+      {% include mathjax_support.html %}
+    {% endif %}
     <!-- Begin section for dataframe table formatting -->
     <style type="text/css">
     table.dataframe {
