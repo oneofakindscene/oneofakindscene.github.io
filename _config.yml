@@ -30,7 +30,8 @@ logo: "/assets/logo.png"
 
 # Conversion
 markdown: kramdown
-highlighter: rouge
+highlightjs_theme: "monokai-sublime"
+# highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
