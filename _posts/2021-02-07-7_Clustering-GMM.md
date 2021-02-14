@@ -604,13 +604,13 @@ df.head()
 
 
 
-## 2. Scaling 하기 
+## 2. Scaling 하기
 __scikit-learn에서는 다음과 같은 스케일링 클래스를 제공한다.__
-- StandardScaler(X) : 평균이 0과 표준편차가 1이 되도록 변환. 
+- StandardScaler(X) : 평균이 0과 표준편차가 1이 되도록 변환.
     - 계산식 : z = (x - u) / s
 - MinMaxScaler(X) : 최대값이 각각 1, 최소값이 0이 되도록 변환
 - MaxAbsScaler(X) : 0을 기준으로 절대값이 가장 큰 수가 1또는 -1이 되도록 변환
-- RobustScaler(X) : 중앙값(median)이 0, IQR(interquartile range)이 1이 되도록 변환. 
+- RobustScaler(X) : 중앙값(median)이 0, IQR(interquartile range)이 1이 되도록 변환.
     - 아웃라이어의 영향을 최소화한 기법. 즉, 4개 중에 가장 이상치의 영향이 적음
 
 __출처__
@@ -807,7 +807,7 @@ df.describe()
 __(PCA를 사용함으로서 얻을 수 있는 장점)__
 - 기존 변수를 조합해 새로운 변수를 만드는 변수 추출(Feature Extraction)기법
 - 1)차원의 저주 문제 : 차원을 축소해주기 때문
-- 2)다중공선성 문제 : CA 알고리즘은 주성분 PC1과 PC2를 찾는 과정에서 두 변수가 직교해야하기때문에 두 변수 사이의 상관관계가 0으로 나타나 다중공선성 문제를 해결
+- 2)다중공선성 문제 : PCA 알고리즘은 주성분 PC1과 PC2를 찾는 과정에서 두 변수가 직교해야하기때문에 두 변수 사이의 상관관계가 0으로 나타나 다중공선성 문제를 해결
 
 
 ```python
@@ -826,16 +826,16 @@ pca_df = pd.DataFrame(data = principalComponents, columns = ['pca1', 'pca2'])
 print(pca_df.head())
 ```
 
-    5 
-    
+    5
+
     [[-1.50397504 -0.46367594]
      [ 0.58569861  1.98480511]
      [-0.4819072   0.01798893]
      ...
      [-1.52614805 -0.54483616]
      [-1.65031872 -0.48325463]
-     [-0.87080777 -1.06752393]] 
-    
+     [-0.87080777 -1.06752393]]
+
            pca1      pca2
     0 -1.503975 -0.463676
     1  0.585699  1.984805
@@ -929,10 +929,10 @@ pca_df.head()
 
 ```python
 plt.plot('pca1', 'pca2',  data = pca_df,
-         linestyle='none', 
-         marker='o', 
+         linestyle='none',
+         marker='o',
          markersize=10,
-         color='blue', 
+         color='blue',
          alpha=0.5)
 plt.title('example', fontsize=20)
 plt.xlabel('X_axis', fontsize=14)
@@ -941,9 +941,9 @@ plt.show()
 ```
 
 
-    
+
 ![png](/images/7_Clustering-GMM_files/7_Clustering-GMM_18_0.png)
-    
+
 
 
 
@@ -964,7 +964,7 @@ print(list(groups))
     8946 -1.526148 -0.544836        0
     8947 -1.650319 -0.483255        0
     8948 -0.870808 -1.067524        0
-    
+
     [6751 rows x 3 columns]), (1,           pca1      pca2  predict
     1     0.585699  1.984805        1
     6     6.278525 -1.971382        1
@@ -977,7 +977,7 @@ print(list(groups))
     8856  3.275819  2.621334        1
     8896  1.030184 -1.490055        1
     8913  0.403814  1.340784        1
-    
+
     [2198 rows x 3 columns])]
 
 
@@ -988,8 +988,8 @@ groups = pca_df.groupby('predict')
 
 fig, ax = plt.subplots()
 for groupidx, data in groups:
-    ax.plot(data.pca1, data.pca2, 
-            marker='o', 
+    ax.plot(data.pca1, data.pca2,
+            marker='o',
             linestyle='',
             label=groupidx)
 ax.legend(fontsize=12)
@@ -1003,6 +1003,5 @@ ax.legend(fontsize=12)
 
 
 
-    
+
 ![png](/images/7_Clustering-GMM_files/7_Clustering-GMM_20_1.png)
-    
