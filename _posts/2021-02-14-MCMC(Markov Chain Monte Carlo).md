@@ -3,7 +3,7 @@ layout: post
 title: MCMC(Markov Chain Monte Carlo)
 date: 2021-02-14T12:11:00
 author: Scene
-categories: Data Science
+categories: DataScience
 ---
 
 ## __MCMC(Markov Chain Monte Carlo)__
