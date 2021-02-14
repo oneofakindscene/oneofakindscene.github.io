@@ -29,7 +29,7 @@ use_math: true
   - parameter estimation(파라미터 추정) $\Rightarrow$ random initialization에서 뽑힌 임의 값을 기반으로 parameter(평균, 표준폍차 등)를 찾아가는 과정
 
 ### __표본을 추출하는 알고리즘 MCMC의 종류__
-- ##### [Metropolis](https://angeloyeo.github.io/2020/09/17/MCMC.html) : Metropolis는 __symmetric__ 한 확률분포를 사용하는 경우에 대한 알고리즘을 제안
+- #### [Metropolis](https://angeloyeo.github.io/2020/09/17/MCMC.html) : Metropolis는 __symmetric__ 한 확률분포를 사용하는 경우에 대한 알고리즘을 제안
   - 수식
     - $f(x)$ : 타겟분포
     - $g(x)$ : 제안분포
@@ -37,13 +37,13 @@ use_math: true
     - 위를 만족하지 못할 경우, ${f(x_1) \over f(x_0)} > u$ 인 경우 accept
     - $u$ 값은 uniform 분포 $U_{(0,1)}$ 에서 임의로 추출한 값
     - 제안 분포 $g(x)$ 의 역할은? : 제안 분포 내에서 다음 포인트($x_1$)를 추천 받음
-- ##### [Metropolis-Hastings](https://angeloyeo.github.io/2020/09/17/MCMC.html) : symmetric 하지 않더라도 일반적인 확률 분포에 대한 경우까지 어떻게 수학적으로 계산할 수 있는지에 관해 기존 Metropolis 알고리즘을 개선한 알고리즘
+- #### [Metropolis-Hastings](https://angeloyeo.github.io/2020/09/17/MCMC.html) : symmetric 하지 않더라도 일반적인 확률 분포에 대한 경우까지 어떻게 수학적으로 계산할 수 있는지에 관해 기존 Metropolis 알고리즘을 개선한 알고리즘
   - 수식
     - Metropolis 수식 : ${f(x_1) \over f(x_0)}$
     - Hastings 수식 : ${f(x_1)/g(x_1|x_0) \over f(x_0)/g(x_0|x_1)}$
     - 새로운 포인트 $x_1$에 대해서는 $x_0$을 기준으로 뽑은 $g(x_1|x_0)$를 이용해 정규화 했다고 볼 수 있음
     - 이전 포인트 $x_0$에 대해서는 새로운 $x_1$을 기준으로 뽑은 $g(x_0|x_1)$ 를 이용해 정규화 했다고 볼 수 있음
-- ##### [Gibbs Sampling](https://bab2min.tistory.com/569) : N차의 자료를 대상으로 확률 분포를 계산하기는 어렵습니다. 이를 위해 N차의 자료를 1차 자료 N개가 모인것으로 가정하고, 나머지 N-1개를 고정하면 한 차원에 대해서만 자료를 샘플링할 수 있습니다. 이렇게 N개의 차원에 대해 각각 자료를 샘플링하여 이를 합치면 전체 N차원의 자료를 샘플링한것과 같지 않겠냐는 것이 깁스 샘플링의 아이디어입니다.
+- #### [Gibbs Sampling](https://bab2min.tistory.com/569) : N차의 자료를 대상으로 확률 분포를 계산하기는 어렵습니다. 이를 위해 N차의 자료를 1차 자료 N개가 모인것으로 가정하고, 나머지 N-1개를 고정하면 한 차원에 대해서만 자료를 샘플링할 수 있습니다. 이렇게 N개의 차원에 대해 각각 자료를 샘플링하여 이를 합치면 전체 N차원의 자료를 샘플링한것과 같지 않겠냐는 것이 깁스 샘플링의 아이디어입니다.
 
 ---
 
